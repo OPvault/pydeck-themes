@@ -1,0 +1,20 @@
+/* Nord Light — snow storm + frost (https://www.nordtheme.com/) */
+:root {
+    --bg-0: #eceff4;
+    --bg-1: #e5e9f0;
+    --bg-2: #d8dee9;
+    --bg-3: #c8d0e0;
+    --surface: rgba(46, 52, 64, 0.045);
+    --surface-hover: rgba(46, 52, 64, 0.09);
+    --border: rgba(46, 52, 64, 0.12);
+    --border-focus: rgba(94, 129, 172, 0.5);
+    --text-0: #2e3440;
+    --text-1: #4c566a;
+    --text-2: #6f7a8c;
+    --accent: #5e81ac;
+    --accent-glow: rgba(94, 129, 172, 0.2);
+    --success: #a3be8c;
+    --error: #bf616a;
+    --ha-on: #a3be8c;
+    --ha-off: #7b8494;
+}

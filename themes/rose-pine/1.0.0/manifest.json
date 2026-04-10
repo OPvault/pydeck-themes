@@ -1,0 +1,12 @@
+{
+    "label": "Rosé Pine",
+    "description": "All natural pine, faux fur and a bit of soho vibes",
+    "variants": {
+        "dark": "dark.css",
+        "light": "light.css"
+    },
+    "variant_labels": {
+        "dark": "Main",
+        "light": "Dawn"
+    }
+}

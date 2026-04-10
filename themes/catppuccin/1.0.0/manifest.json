@@ -1,0 +1,12 @@
+{
+  "label": "Catppuccin",
+  "description": "Soothing pastel theme — Mocha dark and Latte light",
+  "variants": {
+    "dark": "dark.css",
+    "light": "light.css"
+  },
+  "variant_labels": {
+    "dark": "Mocha",
+    "light": "Latte"
+  }
+}

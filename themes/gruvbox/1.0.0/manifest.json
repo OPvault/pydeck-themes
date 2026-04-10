@@ -1,0 +1,12 @@
+{
+  "label": "Gruvbox",
+  "description": "Retro groove color scheme — dark and light",
+  "variants": {
+    "dark": "dark.css",
+    "light": "light.css"
+  },
+  "variant_labels": {
+    "dark": "Dark",
+    "light": "Light"
+  }
+}

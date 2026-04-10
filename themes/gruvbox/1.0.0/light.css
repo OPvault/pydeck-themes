@@ -1,0 +1,20 @@
+/* Gruvbox Light — https://github.com/morhetz/gruvbox */
+:root {
+    --bg-0: #fbf1c7;
+    --bg-1: #f9f5d7;
+    --bg-2: #f2e5bc;
+    --bg-3: #ebdbb2;
+    --surface: rgba(60, 56, 54, 0.04);
+    --surface-hover: rgba(60, 56, 54, 0.08);
+    --border: rgba(60, 56, 54, 0.12);
+    --border-focus: rgba(7, 102, 120, 0.45);
+    --text-0: #3c3836;
+    --text-1: #504945;
+    --text-2: #7c6f64;
+    --accent: #076678;
+    --accent-glow: rgba(7, 102, 120, 0.18);
+    --success: #79740e;
+    --error: #9d0006;
+    --ha-on: #79740e;
+    --ha-off: #7c6f64;
+}

@@ -1,0 +1,12 @@
+{
+  "label": "El clásico",
+  "description": "The original theme shipped with PyDeck v1 — rounded corners, deep navy dark and clean light",
+  "variants": {
+    "dark": "dark.css",
+    "light": "light.css"
+  },
+  "variant_labels": {
+    "dark": "Dark",
+    "light": "Light"
+  }
+}

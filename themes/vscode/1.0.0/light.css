@@ -1,0 +1,20 @@
+/* VS Code Light+ */
+:root {
+    --bg-0: #ffffff;
+    --bg-1: #f3f3f3;
+    --bg-2: #e8e8e8;
+    --bg-3: #d4d4d4;
+    --surface: rgba(0, 0, 0, 0.04);
+    --surface-hover: rgba(0, 0, 0, 0.07);
+    --border: rgba(0, 0, 0, 0.1);
+    --border-focus: rgba(0, 122, 204, 0.6);
+    --text-0: #1e1e1e;
+    --text-1: #3c3c3c;
+    --text-2: #717171;
+    --accent: #007acc;
+    --accent-glow: rgba(0, 122, 204, 0.15);
+    --success: #008000;
+    --error: #e51400;
+    --ha-on: #008000;
+    --ha-off: #a0a0a0;
+}

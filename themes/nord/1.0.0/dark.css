@@ -1,0 +1,20 @@
+/* Nord Dark — polar night + frost (https://www.nordtheme.com/) */
+:root {
+    --bg-0: #2e3440;
+    --bg-1: #3b4252;
+    --bg-2: #434c5e;
+    --bg-3: #4c566a;
+    --surface: rgba(236, 239, 244, 0.06);
+    --surface-hover: rgba(236, 239, 244, 0.11);
+    --border: rgba(236, 239, 244, 0.1);
+    --border-focus: rgba(136, 192, 208, 0.55);
+    --text-0: #eceff4;
+    --text-1: #d8dee9;
+    --text-2: #aeb4c0;
+    --accent: #88c0d0;
+    --accent-glow: rgba(136, 192, 208, 0.18);
+    --success: #a3be8c;
+    --error: #bf616a;
+    --ha-on: #a3be8c;
+    --ha-off: #4c566a;
+}

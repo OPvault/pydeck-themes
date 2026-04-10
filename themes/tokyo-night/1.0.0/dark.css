@@ -1,0 +1,20 @@
+/* Tokyo Night — https://github.com/enkia/tokyo-night-vscode-theme */
+:root {
+    --bg-0: #1a1b2e;
+    --bg-1: #16161e;
+    --bg-2: #1f2335;
+    --bg-3: #292e42;
+    --surface: rgba(192, 202, 245, 0.04);
+    --surface-hover: rgba(192, 202, 245, 0.08);
+    --border: rgba(192, 202, 245, 0.1);
+    --border-focus: rgba(122, 162, 247, 0.5);
+    --text-0: #c0caf5;
+    --text-1: #9aa5ce;
+    --text-2: #565f89;
+    --accent: #7aa2f7;
+    --accent-glow: rgba(122, 162, 247, 0.2);
+    --success: #9ece6a;
+    --error: #f7768e;
+    --ha-on: #9ece6a;
+    --ha-off: #565f89;
+}

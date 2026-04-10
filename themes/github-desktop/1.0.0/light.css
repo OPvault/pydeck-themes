@@ -1,0 +1,20 @@
+/* GitHub Desktop — Light */
+:root {
+    --bg-0: #ffffff;
+    --bg-1: #f6f8fa;
+    --bg-2: #eaeef2;
+    --bg-3: #d0d7de;
+    --surface: rgba(0, 0, 0, 0.04);
+    --surface-hover: rgba(0, 0, 0, 0.08);
+    --border: rgba(0, 0, 0, 0.1);
+    --border-focus: rgba(9, 105, 218, 0.55);
+    --text-0: #1c2128;
+    --text-1: #57606a;
+    --text-2: #8c959f;
+    --accent: #0969da;
+    --accent-glow: rgba(9, 105, 218, 0.15);
+    --success: #1a7f37;
+    --error: #cf222e;
+    --ha-on: #1a7f37;
+    --ha-off: #8c959f;
+}

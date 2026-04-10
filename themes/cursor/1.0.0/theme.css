@@ -1,0 +1,20 @@
+/* Cursor Dark */
+:root {
+    --bg-0: #1e1e1e;
+    --bg-1: #1b1b1b;
+    --bg-2: #222222;
+    --bg-3: #2c2c2c;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-hover: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.07);
+    --border-focus: rgba(82, 120, 245, 0.55);
+    --text-0: #d4d4d4;
+    --text-1: #8c8c8c;
+    --text-2: #5a5a5a;
+    --accent: #5278f5;
+    --accent-glow: rgba(82, 120, 245, 0.2);
+    --success: #4ec9b0;
+    --error: #f44747;
+    --ha-on: #4ec9b0;
+    --ha-off: #5a5a5a;
+}

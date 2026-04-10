@@ -1,0 +1,20 @@
+/* Solarized Light */
+:root {
+    --bg-0: #fdf6e3;
+    --bg-1: #eee8d5;
+    --bg-2: #ddd4b4;
+    --bg-3: #c8bea0;
+    --surface: rgba(0, 0, 0, 0.04);
+    --surface-hover: rgba(0, 0, 0, 0.08);
+    --border: rgba(0, 0, 0, 0.1);
+    --border-focus: rgba(38, 139, 210, 0.55);
+    --text-0: #002b36;
+    --text-1: #073642;
+    --text-2: #657b83;
+    --accent: #268bd2;
+    --accent-glow: rgba(38, 139, 210, 0.15);
+    --success: #859900;
+    --error: #dc322f;
+    --ha-on: #859900;
+    --ha-off: #93a1a1;
+}

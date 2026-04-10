@@ -1,0 +1,12 @@
+{
+  "label": "Tokyo Night",
+  "description": "A clean dark theme inspired by Tokyo at night",
+  "variants": {
+    "dark": "dark.css",
+    "light": "light.css"
+  },
+  "variant_labels": {
+    "dark": "Night",
+    "light": "Day"
+  }
+}

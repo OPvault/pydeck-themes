@@ -1,0 +1,20 @@
+/* Synthwave — retro 80s neon glow */
+:root {
+    --bg-0: #262335;
+    --bg-1: #1a1a2e;
+    --bg-2: #2d2b55;
+    --bg-3: #34294f;
+    --surface: rgba(255, 255, 255, 0.05);
+    --surface-hover: rgba(255, 255, 255, 0.1);
+    --border: rgba(255, 255, 255, 0.09);
+    --border-focus: rgba(255, 121, 198, 0.55);
+    --text-0: #ffffff;
+    --text-1: #e2e0ff;
+    --text-2: #a599e9;
+    --accent: #ff79c6;
+    --accent-glow: rgba(255, 121, 198, 0.22);
+    --success: #72f1b8;
+    --error: #fe4450;
+    --ha-on: #72f1b8;
+    --ha-off: #34294f;
+}

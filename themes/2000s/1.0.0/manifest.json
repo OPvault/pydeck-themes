@@ -1,0 +1,12 @@
+{
+  "label": "2000s",
+  "description": "Windows-2000s style chrome — sharp corners, blue steel gradients",
+  "variants": {
+    "dark": "dark.css",
+    "light": "light.css"
+  },
+  "variant_labels": {
+    "dark": "Dark",
+    "light": "Light"
+  }
+}

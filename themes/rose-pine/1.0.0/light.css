@@ -1,0 +1,20 @@
+/* Rosé Pine — Dawn */
+:root {
+    --bg-0: #faf4ed;
+    --bg-1: #fffaf3;
+    --bg-2: #f2e9e1;
+    --bg-3: #dfdad9;
+    --surface: rgba(0, 0, 0, 0.04);
+    --surface-hover: rgba(0, 0, 0, 0.08);
+    --border: rgba(0, 0, 0, 0.1);
+    --border-focus: rgba(144, 122, 169, 0.5);
+    --text-0: #575279;
+    --text-1: #797593;
+    --text-2: #9893a5;
+    --accent: #907aa9;
+    --accent-glow: rgba(144, 122, 169, 0.15);
+    --success: #56949f;
+    --error: #b4637a;
+    --ha-on: #56949f;
+    --ha-off: #9893a5;
+}

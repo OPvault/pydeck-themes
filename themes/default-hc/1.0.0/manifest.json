@@ -1,0 +1,8 @@
+{
+    "label": "PyDeck High Contrast",
+    "description": "High contrast variant of the default PyDeck theme",
+    "variants": {
+        "dark": "dark.css",
+        "light": "light.css"
+    }
+}

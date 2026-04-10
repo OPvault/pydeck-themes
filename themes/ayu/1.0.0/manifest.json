@@ -1,0 +1,16 @@
+{
+    "label": "Ayu",
+    "description": "Simple, bright and elegant minimalist theme",
+    "variants": {
+        "dark": "dark.css",
+        "light": "light.css"
+    },
+    "variant_labels": {
+        "dark": "Dark",
+        "light": "Mirage"
+    },
+    "variant_schemes": {
+        "dark": "dark",
+        "light": "dark"
+    }
+}

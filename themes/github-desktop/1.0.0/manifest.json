@@ -1,0 +1,12 @@
+{
+    "label": "GitHub Desktop",
+    "description": "GitHub Desktop app — Dark Dimmed and Light palettes",
+    "variants": {
+        "dark": "dark.css",
+        "light": "light.css"
+    },
+    "variant_labels": {
+        "dark": "Dimmed",
+        "light": "Light"
+    }
+}

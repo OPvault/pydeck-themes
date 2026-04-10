@@ -1,0 +1,20 @@
+/* Solarized Dark */
+:root {
+    --bg-0: #002b36;
+    --bg-1: #073642;
+    --bg-2: #0d4250;
+    --bg-3: #586e75;
+    --surface: rgba(255, 255, 255, 0.05);
+    --surface-hover: rgba(255, 255, 255, 0.1);
+    --border: rgba(255, 255, 255, 0.09);
+    --border-focus: rgba(38, 139, 210, 0.55);
+    --text-0: #fdf6e3;
+    --text-1: #93a1a1;
+    --text-2: #657b83;
+    --accent: #268bd2;
+    --accent-glow: rgba(38, 139, 210, 0.2);
+    --success: #859900;
+    --error: #dc322f;
+    --ha-on: #859900;
+    --ha-off: #586e75;
+}

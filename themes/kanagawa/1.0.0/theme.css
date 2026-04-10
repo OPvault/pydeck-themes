@@ -1,0 +1,20 @@
+/* Kanagawa — inspired by Katsushika Hokusai's Great Wave */
+:root {
+    --bg-0: #1f1f28;
+    --bg-1: #16161d;
+    --bg-2: #2a2a37;
+    --bg-3: #363646;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-hover: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.07);
+    --border-focus: rgba(126, 156, 216, 0.5);
+    --text-0: #dcd7ba;
+    --text-1: #c8c093;
+    --text-2: #727169;
+    --accent: #7e9cd8;
+    --accent-glow: rgba(126, 156, 216, 0.18);
+    --success: #98bb6c;
+    --error: #c34043;
+    --ha-on: #98bb6c;
+    --ha-off: #363646;
+}

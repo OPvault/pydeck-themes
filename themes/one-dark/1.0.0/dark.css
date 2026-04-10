@@ -1,0 +1,20 @@
+/* One Dark — Atom's One Dark palette */
+:root {
+    --bg-0: #282c34;
+    --bg-1: #21252b;
+    --bg-2: #2c313c;
+    --bg-3: #3e4452;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-hover: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: rgba(97, 175, 239, 0.5);
+    --text-0: #abb2bf;
+    --text-1: #7f848e;
+    --text-2: #5c6370;
+    --accent: #61afef;
+    --accent-glow: rgba(97, 175, 239, 0.2);
+    --success: #98c379;
+    --error: #e06c75;
+    --ha-on: #98c379;
+    --ha-off: #5c6370;
+}
