@@ -1,0 +1,20 @@
+/* GitHub Dark — github.com default dark canvas */
+:root {
+    --bg-0: #0d1117;
+    --bg-1: #161b22;
+    --bg-2: #21262d;
+    --bg-3: #30363d;
+    --surface: rgba(255, 255, 255, 0.05);
+    --surface-hover: rgba(255, 255, 255, 0.09);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: rgba(88, 166, 255, 0.5);
+    --text-0: #e6edf3;
+    --text-1: #8b949e;
+    --text-2: #6e7681;
+    --accent: #58a6ff;
+    --accent-glow: rgba(88, 166, 255, 0.18);
+    --success: #3fb950;
+    --error: #f85149;
+    --ha-on: #3fb950;
+    --ha-off: #30363d;
+}

@@ -1,0 +1,23 @@
+/* Windows Terminal — dark, square-cornered aesthetic */
+:root {
+    --bg-0: #0c0c0c;
+    --bg-1: #1a1a1a;
+    --bg-2: #2d2d2d;
+    --bg-3: #383838;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-hover: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.09);
+    --border-focus: rgba(97, 214, 214, 0.55);
+    --text-0: #cccccc;
+    --text-1: #9a9a9a;
+    --text-2: #6a6a6a;
+    --accent: #61d6d6;
+    --accent-glow: rgba(97, 214, 214, 0.15);
+    --success: #16c60c;
+    --error: #e74856;
+    --ha-on: #16c60c;
+    --ha-off: #5a5a5a;
+    --radius: 3px;
+    --radius-sm: 2px;
+    --font: "Cascadia Code", "Segoe UI", Consolas, "Courier New", monospace;
+}

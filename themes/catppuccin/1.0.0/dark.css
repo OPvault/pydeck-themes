@@ -1,0 +1,20 @@
+/* Catppuccin Mocha — https://github.com/catppuccin/catppuccin */
+:root {
+    --bg-0: #1e1e2e;
+    --bg-1: #181825;
+    --bg-2: #11111b;
+    --bg-3: #313244;
+    --surface: rgba(205, 214, 244, 0.04);
+    --surface-hover: rgba(205, 214, 244, 0.08);
+    --border: rgba(205, 214, 244, 0.1);
+    --border-focus: rgba(203, 166, 247, 0.5);
+    --text-0: #cdd6f4;
+    --text-1: #a6adc8;
+    --text-2: #6c7086;
+    --accent: #cba6f7;
+    --accent-glow: rgba(203, 166, 247, 0.18);
+    --success: #a6e3a1;
+    --error: #f38ba8;
+    --ha-on: #a6e3a1;
+    --ha-off: #6c7086;
+}

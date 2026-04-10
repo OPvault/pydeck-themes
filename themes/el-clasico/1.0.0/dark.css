@@ -1,0 +1,22 @@
+/* El Clásico — dark variant */
+:root {
+    --bg-0: #0c0c14;
+    --bg-1: #13131f;
+    --bg-2: #1a1a2e;
+    --bg-3: #22223a;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-hover: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: rgba(120, 160, 255, 0.45);
+    --text-0: #eaeaf0;
+    --text-1: #a0a0b8;
+    --text-2: #60607a;
+    --accent: #6c8cff;
+    --accent-glow: rgba(108, 140, 255, 0.25);
+    --success: #3dd68c;
+    --error: #f0506e;
+    --ha-on: #3dd68c;
+    --ha-off: #60607a;
+    --radius: 12px;
+    --radius-sm: 8px;
+}

@@ -1,0 +1,20 @@
+/* Ayu Mirage */
+:root {
+    --bg-0: #1f2430;
+    --bg-1: #242936;
+    --bg-2: #2d3343;
+    --bg-3: #384356;
+    --surface: rgba(255, 255, 255, 0.05);
+    --surface-hover: rgba(255, 255, 255, 0.09);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: rgba(255, 204, 102, 0.5);
+    --text-0: #cccac2;
+    --text-1: #8a9199;
+    --text-2: #5c6773;
+    --accent: #ffcc66;
+    --accent-glow: rgba(255, 204, 102, 0.18);
+    --success: #bae67e;
+    --error: #ff3333;
+    --ha-on: #bae67e;
+    --ha-off: #5c6773;
+}

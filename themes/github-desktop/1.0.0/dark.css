@@ -1,0 +1,20 @@
+/* GitHub Desktop — Dark Dimmed (softer dark, as used in the desktop app) */
+:root {
+    --bg-0: #22272e;
+    --bg-1: #2d333b;
+    --bg-2: #373e47;
+    --bg-3: #444c56;
+    --surface: rgba(255, 255, 255, 0.05);
+    --surface-hover: rgba(255, 255, 255, 0.09);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: rgba(83, 155, 245, 0.5);
+    --text-0: #adbac7;
+    --text-1: #768390;
+    --text-2: #545d68;
+    --accent: #539bf5;
+    --accent-glow: rgba(83, 155, 245, 0.18);
+    --success: #57ab5a;
+    --error: #e5534b;
+    --ha-on: #57ab5a;
+    --ha-off: #444c56;
+}

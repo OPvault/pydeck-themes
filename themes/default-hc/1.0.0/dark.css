@@ -1,0 +1,20 @@
+/* PyDeck High Contrast — maximum legibility, same purple identity */
+:root {
+    --bg-0: #000000;
+    --bg-1: #0a0a0a;
+    --bg-2: #111111;
+    --bg-3: #1c1c1c;
+    --surface: rgba(255, 255, 255, 0.07);
+    --surface-hover: rgba(255, 255, 255, 0.14);
+    --border: rgba(255, 255, 255, 0.35);
+    --border-focus: rgba(200, 150, 255, 0.9);
+    --text-0: #ffffff;
+    --text-1: #e8e8e8;
+    --text-2: #b8b8b8;
+    --accent: #c896ff;
+    --accent-glow: rgba(200, 150, 255, 0.22);
+    --success: #00e676;
+    --error: #ff1744;
+    --ha-on: #00e676;
+    --ha-off: #333333;
+}

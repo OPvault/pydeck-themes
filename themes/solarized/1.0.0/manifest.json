@@ -1,0 +1,8 @@
+{
+    "label": "Solarized",
+    "description": "Ethan Schoonover's precision colour scheme",
+    "variants": {
+        "dark": "dark.css",
+        "light": "light.css"
+    }
+}

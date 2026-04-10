@@ -1,0 +1,20 @@
+/* VS Code Dark+ */
+:root {
+    --bg-0: #1e1e1e;
+    --bg-1: #252526;
+    --bg-2: #2d2d2d;
+    --bg-3: #3c3c3c;
+    --surface: rgba(255, 255, 255, 0.05);
+    --surface-hover: rgba(255, 255, 255, 0.09);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: rgba(0, 122, 204, 0.65);
+    --text-0: #d4d4d4;
+    --text-1: #a0a0a0;
+    --text-2: #6a6a6a;
+    --accent: #007acc;
+    --accent-glow: rgba(0, 122, 204, 0.2);
+    --success: #4ec9b0;
+    --error: #f44747;
+    --ha-on: #4ec9b0;
+    --ha-off: #3c3c3c;
+}

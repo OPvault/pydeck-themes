@@ -1,0 +1,8 @@
+{
+    "label": "Everforest",
+    "description": "Green-based warm, soft colour scheme",
+    "variants": {
+        "dark": "dark.css",
+        "light": "light.css"
+    }
+}

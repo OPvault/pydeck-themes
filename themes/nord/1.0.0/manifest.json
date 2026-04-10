@@ -1,0 +1,12 @@
+{
+  "label": "Nord",
+  "description": "Official Nord palette — Polar Night, Snow Storm, Frost",
+  "variants": {
+    "dark": "dark.css",
+    "light": "light.css"
+  },
+  "variant_labels": {
+    "dark": "Dark",
+    "light": "Light"
+  }
+}

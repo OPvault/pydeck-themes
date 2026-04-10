@@ -1,0 +1,20 @@
+/* Rosé Pine — Main */
+:root {
+    --bg-0: #191724;
+    --bg-1: #1f1d2e;
+    --bg-2: #26233a;
+    --bg-3: #403d52;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-hover: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.07);
+    --border-focus: rgba(196, 167, 231, 0.45);
+    --text-0: #e0def4;
+    --text-1: #908caa;
+    --text-2: #6e6a86;
+    --accent: #c4a7e7;
+    --accent-glow: rgba(196, 167, 231, 0.18);
+    --success: #9ccfd8;
+    --error: #eb6f92;
+    --ha-on: #9ccfd8;
+    --ha-off: #403d52;
+}

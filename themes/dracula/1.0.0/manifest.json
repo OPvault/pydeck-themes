@@ -1,0 +1,10 @@
+{
+  "label": "Dracula",
+  "description": "The Dracula dark theme",
+  "variants": {
+    "dark": "dark.css"
+  },
+  "variant_labels": {
+    "dark": "Dark"
+  }
+}

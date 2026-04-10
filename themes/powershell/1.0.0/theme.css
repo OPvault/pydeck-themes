@@ -1,0 +1,36 @@
+/* PowerShell ISE — script editor (light) */
+main.marketplace-page,
+.device-section {
+    background: #012456;
+    --bg-0: #012456;
+    --bg-1: #012e73;
+    --bg-2: #003270;
+    --bg-3: #004a99;
+    --text-0: #eeedf0;
+    --text-1: #b0c4de;
+    --text-2: #7fa8d4;
+    --surface: rgba(255, 255, 255, 0.06);
+    --surface-hover: rgba(255, 255, 255, 0.11);
+    --border: rgba(255, 255, 255, 0.1);
+    --border-focus: rgba(0, 120, 215, 0.7);
+}
+
+:root {
+    --bg-0: #ffffff;
+    --bg-1: #f0f0f0;
+    --bg-2: #e4e4e4;
+    --bg-3: #d0d0d0;
+    --surface: rgba(0, 0, 0, 0.04);
+    --surface-hover: rgba(0, 0, 0, 0.08);
+    --border: rgba(0, 0, 0, 0.12);
+    --border-focus: rgba(0, 120, 215, 0.65);
+    --text-0: #012456;
+    --text-1: #1a3a6e;
+    --text-2: #666666;
+    --accent: #0078d7;
+    --accent-glow: rgba(0, 120, 215, 0.15);
+    --success: #008000;
+    --error: #cc0000;
+    --ha-on: #008000;
+    --ha-off: #a0a0a0;
+}

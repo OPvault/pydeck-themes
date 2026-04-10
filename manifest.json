@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-04-10T19:15:38Z",
+  "label": "Official · Canary",
+  "themes": [
+    {
+      "name": "2000s",
+      "slug": "2000s",
+      "summary": "Windows-2000s style chrome — sharp corners, blue steel gradients",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/2000s/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Ayu",
+      "slug": "ayu",
+      "summary": "Simple, bright and elegant minimalist theme",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/ayu/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Catppuccin",
+      "slug": "catppuccin",
+      "summary": "Soothing pastel theme — Mocha dark and Latte light",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/catppuccin/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Cursor",
+      "slug": "cursor",
+      "summary": "Cursor IDE dark palette",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/cursor/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Dracula",
+      "slug": "dracula",
+      "summary": "The Dracula dark theme",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/dracula/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "El clásico",
+      "slug": "el-clasico",
+      "summary": "The original theme shipped with PyDeck v1 — rounded corners, deep navy dark and clean light",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/el-clasico/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Everforest",
+      "slug": "everforest",
+      "summary": "Green-based warm, soft colour scheme",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/everforest/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "GitHub",
+      "slug": "github",
+      "summary": "GitHub.com web UI colour palette",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/github/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "GitHub Desktop",
+      "slug": "github-desktop",
+      "summary": "GitHub Desktop app — Dark Dimmed and Light palettes",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/github-desktop/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Gruvbox",
+      "slug": "gruvbox",
+      "summary": "Retro groove color scheme — dark and light",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/gruvbox/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Kanagawa",
+      "slug": "kanagawa",
+      "summary": "Inspired by the colors of the famous painting by Katsushika Hokusai",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/kanagawa/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Monokai",
+      "slug": "monokai",
+      "summary": "Classic Sublime Text dark palette",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/monokai/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Nord",
+      "slug": "nord",
+      "summary": "Official Nord palette — Polar Night, Snow Storm, Frost",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/nord/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "One Dark",
+      "slug": "one-dark",
+      "summary": "Atom's iconic One Dark palette",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/one-dark/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "PowerShell ISE",
+      "slug": "powershell",
+      "summary": "Windows PowerShell ISE — script editor style",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/powershell/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "PyDeck High Contrast",
+      "slug": "default-hc",
+      "summary": "High contrast variant of the default PyDeck theme",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/default-hc/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Rosé Pine",
+      "slug": "rose-pine",
+      "summary": "All natural pine, faux fur and a bit of soho vibes",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/rose-pine/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Solarized",
+      "slug": "solarized",
+      "summary": "Ethan Schoonover's precision colour scheme",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/solarized/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Synthwave",
+      "slug": "synthwave",
+      "summary": "Retro 80s neon glow",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/synthwave/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Tokyo Night",
+      "slug": "tokyo-night",
+      "summary": "A clean dark theme inspired by Tokyo at night",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/tokyo-night/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "VS Code",
+      "slug": "vscode",
+      "summary": "Visual Studio Code Dark+ colour scheme",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/vscode/1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "Windows Terminal",
+      "slug": "windows-terminal",
+      "summary": "Dark theme inspired by the Windows Terminal aesthetic",
+      "author": "PyDeck Team",
+      "latest": "1.0.0",
+      "icon_path": "",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "themes/windows-terminal/1.0.0"
+        }
+      ]
+    }
+  ]
+}

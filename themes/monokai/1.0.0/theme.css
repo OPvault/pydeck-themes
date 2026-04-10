@@ -1,0 +1,20 @@
+/* Monokai — classic Sublime Text dark palette */
+:root {
+    --bg-0: #272822;
+    --bg-1: #1e1f1c;
+    --bg-2: #3e3d32;
+    --bg-3: #49483e;
+    --surface: rgba(255, 255, 255, 0.05);
+    --surface-hover: rgba(255, 255, 255, 0.09);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: rgba(166, 226, 46, 0.5);
+    --text-0: #f8f8f2;
+    --text-1: #cfcfc2;
+    --text-2: #75715e;
+    --accent: #a6e22e;
+    --accent-glow: rgba(166, 226, 46, 0.18);
+    --success: #a6e22e;
+    --error: #f92672;
+    --ha-on: #a6e22e;
+    --ha-off: #49483e;
+}

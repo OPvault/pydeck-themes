@@ -1,0 +1,20 @@
+/* Everforest Light */
+:root {
+    --bg-0: #fff9ef;
+    --bg-1: #f3ead3;
+    --bg-2: #e9dcc0;
+    --bg-3: #d9cdb0;
+    --surface: rgba(0, 0, 0, 0.04);
+    --surface-hover: rgba(0, 0, 0, 0.07);
+    --border: rgba(0, 0, 0, 0.1);
+    --border-focus: rgba(93, 161, 1, 0.55);
+    --text-0: #5c6a72;
+    --text-1: #708090;
+    --text-2: #939f91;
+    --accent: #8da101;
+    --accent-glow: rgba(141, 161, 1, 0.15);
+    --success: #8da101;
+    --error: #f85552;
+    --ha-on: #8da101;
+    --ha-off: #939f91;
+}

@@ -1,0 +1,10 @@
+{
+  "label": "One Dark",
+  "description": "Atom's iconic One Dark palette",
+  "variants": {
+    "dark": "dark.css"
+  },
+  "variant_labels": {
+    "dark": "Dark"
+  }
+}

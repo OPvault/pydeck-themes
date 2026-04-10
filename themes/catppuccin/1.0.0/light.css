@@ -1,0 +1,20 @@
+/* Catppuccin Latte — https://github.com/catppuccin/catppuccin */
+:root {
+    --bg-0: #eff1f5;
+    --bg-1: #e6e9ef;
+    --bg-2: #dce0e8;
+    --bg-3: #ccd0da;
+    --surface: rgba(76, 79, 105, 0.04);
+    --surface-hover: rgba(76, 79, 105, 0.08);
+    --border: rgba(76, 79, 105, 0.12);
+    --border-focus: rgba(136, 57, 239, 0.45);
+    --text-0: #4c4f69;
+    --text-1: #5c5f77;
+    --text-2: #8c8fa1;
+    --accent: #8839ef;
+    --accent-glow: rgba(136, 57, 239, 0.18);
+    --success: #40a02b;
+    --error: #d20f39;
+    --ha-on: #40a02b;
+    --ha-off: #8c8fa1;
+}

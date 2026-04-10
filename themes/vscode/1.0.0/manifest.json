@@ -1,0 +1,12 @@
+{
+    "label": "VS Code",
+    "description": "Visual Studio Code Dark+ colour scheme",
+    "variants": {
+        "dark": "dark.css",
+        "light": "light.css"
+    },
+    "variant_labels": {
+        "dark": "Dark+",
+        "light": "Light+"
+    }
+}

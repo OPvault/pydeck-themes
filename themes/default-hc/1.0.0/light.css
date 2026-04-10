@@ -1,0 +1,20 @@
+/* PyDeck High Contrast Light — maximum legibility on white */
+:root {
+    --bg-0: #ffffff;
+    --bg-1: #f0f0f0;
+    --bg-2: #e0e0e0;
+    --bg-3: #c8c8c8;
+    --surface: rgba(0, 0, 0, 0.06);
+    --surface-hover: rgba(0, 0, 0, 0.12);
+    --border: rgba(0, 0, 0, 0.4);
+    --border-focus: rgba(90, 30, 200, 0.9);
+    --text-0: #000000;
+    --text-1: #1a1a1a;
+    --text-2: #3a3a3a;
+    --accent: #5a1ec8;
+    --accent-glow: rgba(90, 30, 200, 0.15);
+    --success: #006400;
+    --error: #cc0000;
+    --ha-on: #006400;
+    --ha-off: #888888;
+}
