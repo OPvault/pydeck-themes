@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-10T19:01:37Z",
+  "generated_at": "2026-04-10T19:15:38Z",
   "label": "Official · Canary",
   "themes": [
     {
@@ -210,20 +210,6 @@
         {
           "version": "1.0.0",
           "path": "themes/powershell/1.0.0"
-        }
-      ]
-    },
-    {
-      "name": "PyDeck",
-      "slug": "default",
-      "summary": "Built-in dark (app default look) and light appearance",
-      "author": "PyDeck Team",
-      "latest": "1.0.0",
-      "icon_path": "",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "path": "themes/default/1.0.0"
         }
       ]
     },

@@ -1,8 +1,0 @@
-/* Default (dark) — base variables come from app/static/css/style.css */
-:root {
-    --bg-0: #111111;
-    --bg-1: #181818;
-    --accent: #a882ff;
-    --success: #4ade80;
-    --error: #f87171;
-}
