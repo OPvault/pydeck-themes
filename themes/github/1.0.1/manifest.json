@@ -1,0 +1,9 @@
+{
+  "label": "GitHub",
+  "description": "GitHub.com web UI colour palette",
+  "variants": {
+    "dark": "dark.css",
+    "light": "light.css"
+  },
+  "version": "1.0.1"
+}

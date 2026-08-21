@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-21T20:02:25Z",
+  "generated_at": "2026-08-21T20:10:56Z",
   "label": "Official · Canary",
   "themes": [
     {
@@ -106,12 +106,16 @@
       "slug": "github",
       "summary": "GitHub.com web UI colour palette",
       "author": "PyDeck Team",
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "icon_path": "",
       "versions": [
         {
           "version": "1.0.0",
           "path": "themes/github/1.0.0"
+        },
+        {
+          "version": "1.0.1",
+          "path": "themes/github/1.0.1"
         }
       ]
     },
