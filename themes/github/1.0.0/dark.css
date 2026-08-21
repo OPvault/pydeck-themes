@@ -1,10 +1,10 @@
 /* GitHub Dark — github.com default dark canvas */
 :root {
-    --bg-0: #0d1117;
-    --bg-1: #161b22;
+    --bg-0: #010409; 
+    --bg-1: #0d1117;
     --bg-2: #21262d;
     --bg-3: #30363d;
-    --surface: rgba(255, 255, 255, 0.05);
+    --surface: #212830;
     --surface-hover: rgba(255, 255, 255, 0.09);
     --border: rgba(255, 255, 255, 0.08);
     --border-focus: rgba(88, 166, 255, 0.5);

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync themes from a local pydeck source tree into this themes repo.
+"""Sync themes from a local PyDeck themes directory into this themes repo.
 
 Usage
 -----
@@ -23,9 +23,13 @@ The confirmed source path is stored at:
 On first run (or after --regen-conf) the script auto-detects and asks you
 to confirm the path, then saves it so subsequent runs require no input.
 
+Auto-detection prefers **``$XDG_DATA_HOME/pydeck/themes``** (default
+**``~/.local/share/pydeck/themes``**), then legacy **``<pydeck-checkout>/themes``**
+paths if you still develop from an unmigrated tree.
+
 Workflow
 --------
-For every theme directory found in the pydeck source tree:
+For every theme directory found in the PyDeck themes directory:
 
   1. If the slug does **not** exist in this repo → treat as a brand-new theme
      and copy all its files into themes/<slug>/<version>/.
@@ -51,6 +55,7 @@ import argparse
 import difflib
 import filecmp
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -91,13 +96,41 @@ REPO_ONLY_FILES: frozenset[str] = frozenset({
 EXCLUDE_DIRS: frozenset[str] = frozenset({"__pycache__"})
 EXCLUDE_SUFFIXES: frozenset[str] = frozenset({".pyc", ".pyo"})
 
-# ── Candidate pydeck source paths (auto-detection order) ──────────────────────
+# ── Files written by the PyDeck installer, never part of a theme release ───────
+# .marketplace.json records which catalog slug/version a local install came from.
+# It is regenerated on every install, so syncing it would make every theme look
+# changed and trigger an endless chain of empty patch bumps.
+EXCLUDE_FILES: frozenset[str] = frozenset({".marketplace.json"})
+
+# ── Theme slugs that never belong in the marketplace catalog ──────────────────
+# "default" is PyDeck's built-in appearance, shipped with the app itself. It
+# lives in the local themes directory like any other theme, so without this
+# skip-list every sync would re-add it (see commit a41680b, which removed it).
+EXCLUDE_SLUGS: frozenset[str] = frozenset({"default"})
+
+# ── Candidate PyDeck theme directories (auto-detection order) ─────────────────
+# PyDeck installs themes under $XDG_DATA_HOME/pydeck/themes (default
+# ~/.local/share/pydeck/themes). Legacy checkouts may still use <repo>/themes.
+
+
+def _xdg_data_themes_dir() -> Path:
+    raw = (os.environ.get("XDG_DATA_HOME") or "").strip()
+    base = Path(raw).expanduser().resolve() if raw else Path.home() / ".local" / "share"
+    return base / "pydeck" / "themes"
+
 
 _CANDIDATES: list[Path] = [
+    _xdg_data_themes_dir(),
     Path.home() / "Documents" / "GitHub" / "pydeck" / "themes",
     REPO_ROOT.parents[0] / "pydeck" / "themes",
     Path.home() / "pydeck" / "themes",
 ]
+
+
+def pydeck_theme_source_candidates() -> list[Path]:
+    """Return the ordered paths probed by auto-detection (for other tooling)."""
+
+    return list(_CANDIDATES)
 
 # ── Config helpers ─────────────────────────────────────────────────────────────
 
@@ -157,6 +190,8 @@ def _source_files(theme_dir: Path) -> dict[str, Path]:
         if not p.is_file():
             continue
         if p.suffix in EXCLUDE_SUFFIXES:
+            continue
+        if p.name in EXCLUDE_FILES:
             continue
         rel = p.relative_to(theme_dir)
         if any(part in EXCLUDE_DIRS for part in rel.parts):
@@ -233,7 +268,7 @@ def _files_changed(source_files: dict[str, Path], repo_version_dir: Path) -> boo
     for repo_path in repo_version_dir.rglob("*"):
         if not repo_path.is_file():
             continue
-        if repo_path.name in REPO_ONLY_FILES:
+        if repo_path.name in REPO_ONLY_FILES or repo_path.name in EXCLUDE_FILES:
             continue
         rel = str(repo_path.relative_to(repo_version_dir))
         if any(part in EXCLUDE_DIRS for part in Path(rel).parts):
@@ -319,7 +354,7 @@ def _print_theme_diff(
     for repo_path in sorted(repo_version_dir.rglob("*")):
         if not repo_path.is_file():
             continue
-        if repo_path.name in REPO_ONLY_FILES:
+        if repo_path.name in REPO_ONLY_FILES or repo_path.name in EXCLUDE_FILES:
             continue
         rel = str(repo_path.relative_to(repo_version_dir))
         if any(part in EXCLUDE_DIRS for part in Path(rel).parts):
@@ -363,19 +398,25 @@ def _prompt_for_path(detected: Optional[Path], yes: bool) -> Path:
     """Ask the user to confirm or provide the source path, then return it."""
     if detected:
         if yes:
-            print(f"Using pydeck source: {detected}")
+            print(f"Using PyDeck themes source: {detected}")
             return detected
-        print(f"\nDetected pydeck themes source path:")
+        print(f"\nDetected PyDeck themes source path:")
         print(f"  {detected}")
         answer = input("Is this correct? [Y/n] ").strip().lower()
         if answer in ("", "y", "yes"):
             return detected
 
     if not detected:
-        print("Could not auto-detect the pydeck themes/ directory.")
+        print(
+            "Could not auto-detect the themes directory "
+            "(try ~/.local/share/pydeck/themes or your pydeck checkout themes/)."
+        )
 
     while True:
-        raw = input("Enter the full path to pydeck's themes/ directory: ").strip()
+        raw = input(
+            "Enter the full path to the themes directory "
+            "(e.g. ~/.local/share/pydeck/themes or …/pydeck/themes): "
+        ).strip()
         p = Path(raw).expanduser().resolve()
         if p.is_dir():
             return p
@@ -403,7 +444,7 @@ def _resolve_source(
 
     saved = _load_config()
     if saved is not None:
-        print(f"Using saved pydeck source: {saved}")
+        print(f"Using saved PyDeck themes source: {saved}")
         print(f"  (run with --regen-conf to change)")
         return saved
 
@@ -495,7 +536,12 @@ def _sync_theme(
 
 def sync_all(source_root: Path, dry_run: bool, show_diff: bool = False) -> None:
     slug_dirs = sorted(
-        [d for d in source_root.iterdir() if d.is_dir() and not d.name.startswith(".")],
+        [
+            d for d in source_root.iterdir()
+            if d.is_dir()
+            and not d.name.startswith(".")
+            and d.name not in EXCLUDE_SLUGS
+        ],
         key=lambda d: d.name.lower(),
     )
     if not slug_dirs:
@@ -512,13 +558,20 @@ def main() -> None:
         sys.stdout.reconfigure(line_buffering=True)
 
     parser = argparse.ArgumentParser(
-        description="Sync themes from a local pydeck tree into this themes repo.",
+        description=(
+            "Sync themes from a local PyDeck themes directory into this themes repo. "
+            "Auto-detection prefers $XDG_DATA_HOME/pydeck/themes (default "
+            "~/.local/share/pydeck/themes), then legacy checkout paths."
+        ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(
         "--pydeck-source",
         metavar="PATH",
-        help="Path to pydeck's themes/ directory (overrides saved config)",
+        help=(
+            "Path to the themes directory (e.g. ~/.local/share/pydeck/themes or "
+            "<pydeck-checkout>/themes; overrides saved config)"
+        ),
     )
     parser.add_argument(
         "--regen-conf",

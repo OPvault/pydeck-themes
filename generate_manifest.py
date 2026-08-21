@@ -30,12 +30,20 @@ For each themes/<slug>/ directory:
   4. The icon path is auto-detected: icon.svg is preferred over icon.png.
 
 Themes are written in alphabetical order by name.
+
+Related tooling
+---------------
+``sync_from_pydeck.py`` copies from a local PyDeck themes directory into this
+repo; auto-detection prefers **``$XDG_DATA_HOME/pydeck/themes``** (default
+**``~/.local/share/pydeck/themes``**). Use ``default_pydeck_themes_install_dir()``
+below when you need that path from Python.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -46,6 +54,14 @@ from typing import Any, Dict, List, Optional, Tuple
 REPO_ROOT     = Path(__file__).resolve().parent
 THEMES_DIR    = REPO_ROOT / "themes"
 ROOT_MANIFEST = REPO_ROOT / "manifest.json"
+
+
+def default_pydeck_themes_install_dir() -> Path:
+    """Return ``$XDG_DATA_HOME/pydeck/themes`` (default ``~/.local/share/pydeck/themes``)."""
+
+    raw = (os.environ.get("XDG_DATA_HOME") or "").strip()
+    base = Path(raw).expanduser().resolve() if raw else Path.home() / ".local" / "share"
+    return base / "pydeck" / "themes"
 
 SCHEMA_VERSION = 1
 DEFAULT_LABEL  = "Official · Canary"
@@ -226,8 +242,13 @@ def generate(label: str, output: Path, dry_run: bool) -> None:
 
 
 def main() -> None:
+    default_install = default_pydeck_themes_install_dir()
     parser = argparse.ArgumentParser(
-        description="Generate the root manifest.json for the pydeck-themes repo.",
+        description=(
+            "Generate the root manifest.json for the pydeck-themes repo. "
+            f"PyDeck installs themes under {default_install} by default "
+            "(override with $XDG_DATA_HOME); sync_from_pydeck.py copies from there."
+        ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(
