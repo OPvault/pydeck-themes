@@ -59,6 +59,14 @@ Version directories are semver-named (`themes/<slug>/1.0.0/`) and treated as imm
 releases — a change never edits an existing version folder, it creates a new one. The
 highest semver directory becomes `latest`.
 
+**Never edit a file inside an existing version directory.** Doing so silently breaks
+already-installed clients: they recorded that version in `.marketplace.json` and only re-fetch
+when `latest` changes, so they keep the old bytes forever. The sync cannot protect you here —
+it compares the source against the repo **working tree**, not against git HEAD, so a hand-edit
+already sitting in a version directory reads as "unchanged" and reports SKIP. If `git status`
+shows a modified file under `themes/<slug>/<version>/`, that is a mistake to undo, not a
+change to commit: restore the file and let the sync create a new version instead.
+
 `sync_from_pydeck.py` decides per theme:
 
 - slug absent (or has no non-empty version dir) → **NEW**: copy into the source manifest's
