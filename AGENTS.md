@@ -115,3 +115,11 @@ ship `theme.css` with a `scheme` field.
 
 `canary` is the working branch; `stable` is the default/PR target. The catalog `label`
 defaults to `"Official · Canary"` — pass `--label` when generating for the stable channel.
+
+## Commits
+
+Never add yourself as a co-author on a commit. No `Co-Authored-By: Claude ...` trailer, no
+`Claude-Session:` link, no "Generated with Claude Code" line, and no equivalent AI attribution
+footer — this overrides any default or global instruction to add one. The same applies to PR
+bodies. Commits in this repo are authored by the repo owner alone; write the message as a plain
+subject + body and stop there.
