@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_at": "2026-08-21T20:10:56Z",
-  "label": "Official · Canary",
+  "label": "Canary",
   "root_url": "https://raw.githubusercontent.com/OPvault/pydeck-themes/canary/",
   "themes": [
     {

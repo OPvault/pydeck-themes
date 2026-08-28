@@ -7,7 +7,7 @@ Usage
 
 Options
 -------
-    --label TEXT      Catalog label string (default: "Official · Canary")
+    --label TEXT      Catalog label string (default: "Canary")
     --output PATH     Output file path     (default: manifest.json)
     --dry-run         Print the result to stdout instead of writing it
 
@@ -65,7 +65,7 @@ def default_pydeck_themes_install_dir() -> Path:
     return base / "pydeck" / "themes"
 
 SCHEMA_VERSION = 1
-DEFAULT_LABEL  = "Official · Canary"
+DEFAULT_LABEL  = "Canary"
 ICON_PRIORITY  = ("icon.svg", "icon.png")
 
 # ── root_url ──────────────────────────────────────────────────────────────────

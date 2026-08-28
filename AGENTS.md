@@ -27,7 +27,7 @@ python sync_from_pydeck.py --regen-conf    # re-prompt and re-save the source pa
 # Rebuild the root manifest only (also run automatically at the end of a sync)
 python generate_manifest.py
 python generate_manifest.py --dry-run
-python generate_manifest.py --label "Official · Stable"
+python generate_manifest.py --label "Stable"
 ```
 
 The confirmed source path is cached at `~/.config/pydeck/pydeck-themes/path.json`.
@@ -114,7 +114,12 @@ ship `theme.css` with a `scheme` field.
 ## Branches
 
 `canary` is the working branch; `stable` is the default/PR target. The catalog `label`
-defaults to `"Official · Canary"` — pass `--label` when generating for the stable channel.
+defaults to `"Canary"` — pass `--label` when generating for the stable channel.
+
+The label names the channel only. PyDeck marks a catalog **Official** itself, from the host it
+was fetched from (`*.pydeck.no`, or a `raw.githubusercontent.com` URL under `OPvault`) — never
+from anything the manifest claims, which any catalog could forge. Do not put "Official" back
+in the label.
 
 ## Commits
 
