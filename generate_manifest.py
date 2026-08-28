@@ -43,6 +43,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import os
 import sys
 from datetime import datetime, timezone
@@ -66,6 +67,39 @@ def default_pydeck_themes_install_dir() -> Path:
 SCHEMA_VERSION = 1
 DEFAULT_LABEL  = "Official · Canary"
 ICON_PRIORITY  = ("icon.svg", "icon.png")
+
+# ── root_url ──────────────────────────────────────────────────────────────────
+# The manifest is fetched from a vanity domain that proxies it, so consumers
+# cannot derive where the files live from the URL they fetched. root_url states
+# it outright: the base every icon_path / version path hangs off.
+
+ROOT_URL_TEMPLATE = "https://raw.githubusercontent.com/{owner}/{repo}/{branch}/"
+
+
+def _git_output(*args: str) -> str:
+    import subprocess
+    try:
+        r = subprocess.run(["git", *args], cwd=REPO_ROOT,
+                           capture_output=True, text=True)
+    except OSError:
+        return ""
+    return r.stdout.strip() if r.returncode == 0 else ""
+
+
+def default_root_url() -> str:
+    """Raw base for the checked-out branch, or "" when it cannot be determined.
+
+    Only a default: any script that writes a manifest for a branch other than
+    the one it is standing on must pass --root-url explicitly.
+    """
+
+    remote = _git_output("remote", "get-url", "origin")
+    branch = _git_output("rev-parse", "--abbrev-ref", "HEAD")
+    m = re.search(r"[:/]([^/:]+)/([^/]+?)(?:\.git)?/?$", remote)
+    if not m or not branch or branch == "HEAD":
+        return ""
+    return ROOT_URL_TEMPLATE.format(owner=m.group(1), repo=m.group(2), branch=branch)
+
 
 # ── Semver helpers ─────────────────────────────────────────────────────────────
 
@@ -203,7 +237,7 @@ def _build_theme_entry(
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 
-def generate(label: str, output: Path, dry_run: bool) -> None:
+def generate(label: str, root_url: str, output: Path, dry_run: bool) -> None:
     existing = _load_existing_root()
     themes: List[Dict[str, Any]] = []
 
@@ -228,6 +262,7 @@ def generate(label: str, output: Path, dry_run: bool) -> None:
         "schema_version": SCHEMA_VERSION,
         "generated_at":   datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "label":          label,
+        "root_url":       root_url,
         "themes":         themes,
     }
 
@@ -257,6 +292,12 @@ def main() -> None:
         help=f'Catalog label (default: "{DEFAULT_LABEL}")',
     )
     parser.add_argument(
+        "--root-url",
+        default=default_root_url(),
+        help="Base URL the entry paths resolve against "
+             "(default: the raw URL of the checked-out branch)",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=ROOT_MANIFEST,
@@ -268,7 +309,8 @@ def main() -> None:
         help="Print the generated JSON to stdout without writing any file",
     )
     args = parser.parse_args()
-    generate(label=args.label, output=args.output, dry_run=args.dry_run)
+    generate(label=args.label, root_url=args.root_url,
+             output=args.output, dry_run=args.dry_run)
 
 
 if __name__ == "__main__":
