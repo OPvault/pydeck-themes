@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-21T20:10:56Z",
+  "generated_at": "2026-08-29T22:32:29Z",
   "label": "Canary",
   "root_url": "https://raw.githubusercontent.com/OPvault/pydeck-themes/canary/",
   "themes": [
@@ -9,12 +9,16 @@
       "slug": "2000s",
       "summary": "Windows-2000s style chrome — sharp corners, blue steel gradients",
       "author": "PyDeck Team",
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "icon_path": "",
       "versions": [
         {
           "version": "1.0.0",
           "path": "themes/2000s/1.0.0"
+        },
+        {
+          "version": "1.0.1",
+          "path": "themes/2000s/1.0.1"
         }
       ]
     },
